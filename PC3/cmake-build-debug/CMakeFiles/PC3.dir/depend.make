@@ -6,4 +6,5 @@ CMakeFiles\PC3.dir\Matriz.cpp.obj: ..\Matriz.h
 
 CMakeFiles\PC3.dir\main.cpp.obj: ..\Matriz.h
 CMakeFiles\PC3.dir\main.cpp.obj: ..\main.cpp
+CMakeFiles\PC3.dir\main.cpp.obj: ..\map.h
 

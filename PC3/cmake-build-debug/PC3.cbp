@@ -91,6 +91,9 @@
 		<Unit filename="C:/Users/David Lazo/CLionProjects/PC3/main.cpp">
 			<Option target="PC3"/>
 		</Unit>
+		<Unit filename="C:/Users/David Lazo/CLionProjects/PC3/map.h">
+			<Option target="PC3"/>
+		</Unit>
 		<Unit filename="C:/Users/David Lazo/CLionProjects/PC3/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

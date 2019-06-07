@@ -2,7 +2,56 @@
 #include "Matriz.h"
 #include <deque>
 #include <map>
+#include <fstream>
+#include <sstream>
+#include "map.h"
 using namespace std;
+//Pregunta 3
+class  seccion1{
+    map<string,int> mapa;
+public:
+    void funcion(ifstream &direccion){
+        string primera_cosa;
+        while (direccion>>primera_cosa){
+
+            if (primera_cosa=="C"){
+                string nombre;
+                int puntaje;
+                direccion>>nombre;
+                direccion>>puntaje;
+                mapa[nombre]=puntaje;
+            }
+            else{
+                if (primera_cosa=="L"){
+                    string nombre;
+                    direccion>>nombre;
+                    if (nombre=="All"){
+                        for (auto it=mapa.begin(); it!=mapa.end(); ++it)
+                            cout << it->first << " => " << it->second << '\n';
+                        cout<<"aqui termino la funcion"<<endl;
+                    }
+                    else{
+                        for (auto it=mapa.begin(); it!=mapa.end(); ++it)
+                            if (it->first==nombre){
+                                cout << it->first << " => " << it->second << '\n';
+                                cout<<"aqui termino la funcion"<<endl;
+                            }
+                    }
+                }
+                else{
+                    if (primera_cosa=="D"){
+                        string nombre;
+                        direccion>>nombre;
+                        mapa.erase(nombre);
+                    }
+                }
+            }
+        }
+    }
+
+
+};
+
 
 //Pregunta 2 con Template
 template <typename D>
@@ -22,6 +71,7 @@ deque<D> generar(deque<D> list, int dq){
     }
     return result;
 }
+
 int main() {
 
     cout<<"Pregunta1............!!!"<<endl;
@@ -57,7 +107,10 @@ int main() {
     cout<<endl;
     cout<<"Pregunta3............!!!"<<endl;
 
-
+    ifstream a;
+    a.open("prueba.txt");
+    seccion1 b;
+    b.funcion(a);
     return 0;
 
 }
