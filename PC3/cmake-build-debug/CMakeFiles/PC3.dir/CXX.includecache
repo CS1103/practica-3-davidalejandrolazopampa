@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/David Lazo/CLionProjects/PC3/Matriz.h
+
+C:/Users/David Lazo/CLionProjects/PC3/main.cpp
+iostream
+-
+Matriz.h
+C:/Users/David Lazo/CLionProjects/PC3/Matriz.h
+deque
+-
+map
+-
+
